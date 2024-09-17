@@ -29,7 +29,11 @@ export const GET_USER = gql`
             email, 
             books {
                 id, 
-                name
+                name,
+                prices {
+                    amount,
+                    id
+                }
             }
         }
     }

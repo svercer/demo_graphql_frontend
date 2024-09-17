@@ -1,8 +1,8 @@
 import {gql} from "@apollo/client";
 
 export const CREATE_BOOK = gql`
-    mutation createBook($name: String!, $userId: ID!) {
-        createBook(name: $name, userId: $userId) {
+    mutation createBook($name: String!, $userId: ID!, $price: String!) {
+        createBook(name: $name, userId: $userId, price: $price) {
             id
             name
         }
@@ -10,8 +10,8 @@ export const CREATE_BOOK = gql`
 `;
 
 export const EDIT_BOOK = gql`
-    mutation updateBook($id: ID!, $name: String!) {
-        updateBook(id: $id,  name: $name) {
+    mutation updateBook($id: ID!, $name: String!, $price: String!) {
+        updateBook(id: $id,  name: $name, price: $price) {
             id
             name
         }

@@ -5,7 +5,7 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import Create from "@/components/modals/features/users/Books/Create.tsx";
 import Delete from "@/components/modals/features/users/Books/Delete.tsx";
 import {Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table.tsx";
-import Edit from "@/components/modals/features/users/Edit.tsx";
+import Edit from "@/components/modals/features/users/books/Edit.tsx";
 import {Button} from "@/components/ui/button.tsx";
 
 const Show = () => {
@@ -36,6 +36,7 @@ const Show = () => {
                             <TableRow>
                                 <TableHead className="">ID</TableHead>
                                 <TableHead>Name</TableHead>
+                                <TableHead>Price</TableHead>
                                 <TableHead className="text-right">Actions</TableHead>
                             </TableRow>
                         </TableHeader>
@@ -44,7 +45,9 @@ const Show = () => {
                                 <TableRow key={book.id}>
                                     <TableCell align='left' className="font-medium">{book.id}</TableCell>
                                     <TableCell align='left'>{book.name} </TableCell>
+                                    <TableCell align='left'>{book.prices[book.prices.length - 1]?.amount} </TableCell>
                                     <TableCell className={'flex flex-row gap-1 justify-end'}>
+                                        <Edit book={book} />
                                         <Delete book={book}/>
 
                                     </TableCell>

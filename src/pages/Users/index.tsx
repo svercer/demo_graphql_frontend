@@ -23,7 +23,7 @@ const Users = () => {
         <div className={'py-20 px-20 flex flex-col gap-5'}>
             <Create/>
             <Table>
-                <TableCaption>A list of your recent invoices.</TableCaption>
+                <TableCaption>A list of your recent Users.</TableCaption>
                 <TableHeader>
                     <TableRow>
                         <TableHead className="">ID</TableHead>
