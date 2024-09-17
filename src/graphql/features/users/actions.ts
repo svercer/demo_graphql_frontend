@@ -21,6 +21,20 @@ export const GET_USERS = gql`
     }
 `;
 
+export const GET_USER = gql`
+    query getUser($id: ID!) {
+        user(id: $id) {
+            id,
+            name, 
+            email, 
+            books {
+                id, 
+                name
+            }
+        }
+    }
+`;
+
 
 export const CREATE_USER = gql`
     mutation createUser($name: String!, $email: String!) {
