@@ -110,7 +110,7 @@ const Create = () => {
                                     <AlertDialogCancel onClick={handleClose}>
                                         Cancel
                                     </AlertDialogCancel>
-                                    { loading ? <Loader/> :<Button type={"submit"}>Continue</Button>}
+                                    { loading ? <Loader className={'animate-spin'}/> :<Button type={"submit"}>Continue</Button>}
                                 </div>
                                 <div>
                                     {error && `Submission error! ${error?.message}`}

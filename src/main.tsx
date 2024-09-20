@@ -29,11 +29,10 @@ const client = new ApolloClient({
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
         <StrictMode>
-
             <ApolloProvider client={client}>
                 <NavigationMenu/>
                 <App/>
             </ApolloProvider>
-        </StrictMode>,
+        </StrictMode>
     </BrowserRouter>
 )
