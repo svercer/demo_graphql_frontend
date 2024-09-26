@@ -1,4 +1,4 @@
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useQuery} from "@apollo/client";
 import {GET_USER} from "@/graphql/features/users/actions.ts";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card.tsx";
@@ -6,7 +6,6 @@ import Create from "@/components/modals/features/users/Books/Create.tsx";
 import Delete from "@/components/modals/features/users/Books/Delete.tsx";
 import {Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table.tsx";
 import Edit from "@/components/modals/features/users/books/Edit.tsx";
-import {Button} from "@/components/ui/button.tsx";
 
 const Show = () => {
 

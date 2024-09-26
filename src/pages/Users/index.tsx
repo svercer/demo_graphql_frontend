@@ -1,5 +1,4 @@
 import {useQuery} from "@apollo/client";
-import {User} from "@/types/User.ts";
 import {GET_USERS} from "@/graphql/features/users/actions.ts";
 import Create from "@/components/modals/features/users/Create.tsx";
 import {Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table.tsx";
@@ -10,15 +9,16 @@ import {Button} from "@/components/ui/button.tsx";
 
 const Users = () => {
 
-    const {loading, error, data} = useQuery<{ users: { data: User[], meta: any } }>(GET_USERS, {
+    const {loading, error, data} = useQuery(GET_USERS, {
         variables: {
-            pageSize: '50',
+            pageSize: '10',
             page: 1
         }
     });
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error : {error.message}</p>;
+
     return (
         <div className={'py-20 px-20 flex flex-col gap-5'}>
             <Create/>

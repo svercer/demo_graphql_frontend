@@ -22,8 +22,6 @@ const client = new ApolloClient({
             }
         }
     }),
-
-
 });
 
 createRoot(document.getElementById('root')!).render(
